@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Indexhtml";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+<h2>
+    首页生成</h2>
+<h2>
+    全部生成成功|开始时间:@(ViewData["timeBegin"])- 结束时间:@(ViewData["timeEnd"])</h2>
+<br />
+<h2>
+    耗费时间:@(ViewData["timeBE"])</h2>
+<br />
+<div id="message-success" class="message message-success">
+    <div class="image">
+        <img src="../../Content/Admin/images/icons/success.png" alt="Success" height="32">
+    </div>
+    <div class="text">
+        <h6>
+            生成静态页成功
+        </h6>
+        <span><a href="../../index.html" target="_blank">立即预览 </a></span>
+    </div>
+</div>
+<br />
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () {
+        //A
+        $("#h-menu-siteInfo").addClass("selected");
+        $("#menu-siteInfo").removeClass("closed");
+
+        //D
+        $("#createpage").addClass("current");
+
+    });
+</script>

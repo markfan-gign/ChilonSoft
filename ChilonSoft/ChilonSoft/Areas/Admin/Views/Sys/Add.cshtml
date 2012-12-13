@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+<h2>
+    创 建 管 理 员</h2>
+@using (Html.BeginForm("Add", "Sys", FormMethod.Post, new { id = "addform" }))
+{ 
+    <div class="form">
+        <div class="fields">
+            <div class="field  field-first">
+                <div class="label">
+                    <label for="input-small">
+                        登录帐号:</label>
+                </div>
+                <div class="input">
+                    <input type="text" id="LogName" name="LogName" class="small" datatype="s6-18" nullmsg="请输入登录帐号！" errormsg="登录帐号至少6个字符,最多18个字符！">
+                </div>
+            </div>
+            <div class="field  field-first">
+                <div class="label">
+                    <label for="input-small">
+                        登录密码:</label>
+                </div>
+                <div class="input">
+                    <input type="password" id="PassWord" name="PassWord" class="small" datatype="*6-16" nullmsg="请输入登录密码！" errormsg="登录密码范围在6~16位之间！">
+                </div>
+            </div>
+            <div class="buttons">
+                <input type="submit" name="submit" value="创建" class="ui-button ui-widget ui-state-default ui-corner-all"
+                    role="button" aria-disabled="false">
+                <input type="reset" name="reset" value="清空" class="ui-button ui-widget ui-state-default ui-corner-all"
+                    role="button" aria-disabled="false">
+            </div>
+        </div>
+    </div>
+}
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () {
+        //A
+        $("#h-menu-system").addClass("selected");
+        $("#menu-system").removeClass("closed");
+        //B
+        $("#systemli").removeClass("plus");
+        $("#systemuserul").removeClass("collapsed");
+        //C
+        $("#systemli").addClass("minus");
+        $("#systemuserul").addClass("expanded");
+        //D
+        $("#sysuseradd").addClass("current");
+        //Validform
+        $("#addform").Validform();
+       
+    });
+</script>
+<!-- scripts (Validform) -->
+<script src="@Url.Content("~/Content/admin/scripts/Validform_v5.1.js")" type="text/javascript"></script>

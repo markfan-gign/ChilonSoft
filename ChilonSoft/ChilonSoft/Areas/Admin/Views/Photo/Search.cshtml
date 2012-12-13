@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>Search</h2>
+
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () {
+        //A
+        $("#h-menu-photo").addClass("selected");
+        $("#menu-photo").removeClass("closed");
+        //B
+        $("#photoli").removeClass("plus");
+        $("#photoul").removeClass("collapsed");
+        //C
+        $("#photoli").addClass("minus");
+        $("#photoul").addClass("expanded");
+        //D
+        $("#photolist").addClass("current");
+    });
+</script>

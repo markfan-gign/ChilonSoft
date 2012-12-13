@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+@model ChilonSoft.Models.SysUser
+<h2>
+    修改密码</h2>
+@using (Html.BeginForm("Edit", "Sys", FormMethod.Post, new { id = "editform" }))
+{ 
+    <div class="form">
+        <div class="fields">
+            <div class="field  field-first">
+                <div class="label">
+                    <label for="input-small">
+                        登录帐号:</label>
+                </div>
+                <div class="input">
+                    @Html.TextBoxFor(d => d.LogName, new { @class = "small error", @readonly = "readonly" })
+                    <span class="error">温馨提示:创建管理员后,不能修改帐号！</span>
+                </div>
+            </div>
+            <div class="field  field-first">
+                <div class="label">
+                    <label for="input-small">
+                        登录密码:</label>
+                </div>
+                <div class="input">
+                    @Html.TextBoxFor(d => d.PassWord, new { @class = "small", @type = "password", @datatype = "*6-16", @nullmsg = "请设置密码！", @errormsg = "密码范围在6~16位之间！" })
+                </div>
+                
+            </div>
+            <div class="buttons">
+                <input id="submit" type="submit" name="submit" value="修改登录密码" class="ui-button ui-widget ui-state-default ui-corner-all"
+                    role="button" aria-disabled="false">
+            </div>
+        </div>
+    </div>
+}
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () {
+        $("#h-menu-system").addClass("selected");
+        $("#menu-system").removeClass("closed");
+        $("#system").addClass("opened");
+        $("#system").removeClass("plus");
+        $("#systemuser").removeClass("collapsed");
+        $("#system").addClass("minus");
+        $("#systemuser").addClass("expanded");
+        //Validform
+        $("#editform").Validform();
+
+        /*
+        $("#editform").Validform({
+            tiptype:1
+        });
+        var showmsg = function (msg) {//假定你的信息提示方法为showmsg， 在方法里可以接收参数msg，当然也可以接收到o及cssctl;
+        alert(msg);
+        }
+        $("#editform").Validform({
+        tiptype: function (msg) {
+        showmsg(msg);
+        },
+        tipSweep: true
+        });
+        */
+
+    });
+    //$("#submit").click(function () { $("#editform").Validform(); });
+</script>
+<!-- scripts (Validform) -->
+<script src="@Url.Content("~/Content/admin/scripts/Validform_v5.1.js")" type="text/javascript"></script>

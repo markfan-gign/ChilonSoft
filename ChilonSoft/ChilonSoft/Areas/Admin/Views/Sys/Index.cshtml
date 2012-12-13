@@ -1,0 +1,132 @@
+﻿@model ChilonSoft.Helpers.Pager<ChilonSoft.Models.SysUser>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+@using ChilonSoft.Helpers
+<!--<h2>Index</h2> -->
+<div class="box">
+    <!-- box / title -->
+    <div class="title">
+        <h5>
+            管 理 员 列 表</h5>
+        <div class="search">
+            <form action="#" method="post">
+            <div class="input">
+                <input type="text" id="search" name="search">
+            </div>
+            <div class="button">
+                <input type="submit" name="submit" value="查询" class="ui-button ui-widget ui-state-default ui-corner-all"
+                    role="button" aria-disabled="false">
+            </div>
+            </form>
+        </div>
+    </div>
+    <!-- end box / title -->
+    <div class="table">
+        <form action="" method="post">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        编号
+                    </th>
+                    <th>
+                        登录名
+                    </th>
+                    <th>
+                        创建时间
+                    </th>
+                    <th>
+                        状态
+                    </th>
+                    <th>
+                        操作
+                    </th>
+                    <th class="selected last">
+                        <input type="checkbox" class="checkall">
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="category">
+                            @Html.Encode(item.SysUserID)
+                        </td>
+                        <td class="category">
+                            @Html.Encode(item.LogName)
+                        </td>
+                        <td class="date" id="dp1346829800737">
+                            @Html.Encode(String.Format("{0:yyyy-MM-dd HH:mm:ss}", item.CreateTime))
+                        </td>
+                        <td class="category">
+                            @Html.Encode(item.State.ToString() == "1" ? "启用" : "停用")
+                        </td>
+                        <td class="category">
+                            <!-- Icons -->
+                            <a href="@Url.Action("delete", "sys", new { id = item.SysUserID })" title="删除" onclick="return confirm('删除后无法恢复,确定要删除吗')">
+                                <img src="/Content/admin/images/icons/crossRed.png" alt="删除" /></a> <a href="@Url.Action("edit", "sys", new { id = item.SysUserID })" title="修改">
+                                    <img src="/Content/admin/images/icons/hammer_screwdriver.png" alt="修改" /></a>
+                        </td>
+                        <td class="selected last">
+                            <input type="checkbox">
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+<!-- pagination -->
+        <div class="pagination pagination-left">
+            <ul class="pager">
+            @if (Model.TotalPages > 0) { 
+                 <li><a href="@Url.Action("index", "sys", new { page = (1) })" title="First Page">&laquo; 首  页</a></li>
+            }
+               @if (Model.HasPreviousPage)
+               {
+                   <li><a href="@Url.Action("index", "sys", new { page = (Model.PageIndex) })" title="Previous Page">&laquo; 上一页</a></li>
+               }
+               @foreach (int i in Model.PageList)
+               {
+                   if (Model.PageIndex + 1 == i)
+                   {
+                        <li class="current"><a href="@Url.Action("index", "sys", new { page = (i) })" class="number current" >@i.ToString()</a></li>
+                   }
+                   else
+                   {
+                       <li><a href="@Url.Action("index", "sys", new { page = (i) }) " class="number" >@i.ToString()</a></li>
+                   }
+
+               }
+               @if (Model.HasNextPage)
+               {
+                   <li><a href="@Url.Action("index", "sys", new { page = (Model.PageIndex + 2) })" >下一页 &raquo;</a></li> 
+               }
+               else
+               {
+                   <li><a href="@Url.Action("index", "product", new { page = (Model.TotalPages) })" >尾  页 &raquo;</a></li>
+               }
+            </ul>
+        </div>
+        <!-- end pagination -->
+        <!-- table action -->
+        <!-- end table action -->
+        </form>
+    </div>
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function () {
+            //A
+            $("#h-menu-system").addClass("selected");
+            $("#menu-system").removeClass("closed");
+            //B
+            $("#systemli").removeClass("plus");
+            $("#systemuserul").removeClass("collapsed");
+            //C
+            $("#systemli").addClass("minus");
+            $("#systemuserul").addClass("expanded");
+            //D
+            $("#sysuserlist").addClass("current");
+        });
+    </script>
+</div>

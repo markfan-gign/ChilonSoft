@@ -1,0 +1,176 @@
+﻿@model ChilonSoft.Helpers.Pager<ChilonSoft.Models.AdClass>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+<!--<h2>Index</h2> -->
+<div class="box">
+    <!-- box / title -->
+    <div class="title">
+        <h5>
+            广 告 分 类 列 表</h5>
+    </div>
+    <!-- end box / title -->
+    <div class="table">
+        <form action="" method="post">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        编号
+                    </th>
+                    <th>
+                        分类名称
+                    </th>
+                    <th>
+                        广告位置
+                    </th>
+                    <th>
+                        投放数量
+                    </th>
+                    <th>
+                        排序编号
+                    </th>
+                    <th>
+                        添加时间
+                    </th>
+                    <th>
+                        修改时间
+                    </th>
+                    <th>
+                        状态
+                    </th>
+                    <th>
+                        操作
+                    </th>
+                    <th class="selected last">
+                        <input type="checkbox" class="checkall">
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="category">
+                            @Html.Encode(item.ClassID)
+                        </td>
+                        <td class="category">
+                            @Html.Encode(item.ClassName)
+                        </td>
+                        <td class="category">
+                            @Html.Encode(item.AdLocation)
+                        </td>
+                        <td class="category">
+                            @Html.Encode(item.AdNum)
+                        </td>
+                        <td class="category">
+                            @Html.Encode(item.OrderNum)
+                        </td>
+                        <td class="category" id="dp1346829800737">
+                            @Html.Encode(String.Format("{0:yyyy-MM-dd }", item.AddTime))
+                        </td>
+                        <td class="category" id="dp1346829800737">
+                            @Html.Encode(String.Format("{0:yyyy-MM-dd }", item.EditTime))
+                        </td>
+                        <td class="category">
+                            @Html.Encode(item.ClassStatus.ToString() == "1" ? "启用" : "停用")
+                        </td>
+                        <td class="category">
+                            <!-- Icons -->
+                            <a href="@Url.Action("delete", "adcategory", new { id = item.ClassID })" title="删除" onclick="return confirm('删除后无法恢复,确定要删除吗')">
+                                <img src="/Content/admin/images/icons/crossRed.png" alt="删除" /></a> <a href="@Url.Action("edit", "adcategory", new { id = item.ClassID })" title="修改">
+                                    <img src="/Content/admin/images/icons/hammer_screwdriver.png" alt="修改" /></a>
+                        </td>
+                        <td class="selected last">
+                            <input type="checkbox">
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <!-- pagination -->
+        <div class="pagination pagination-left">
+            <ul class="pager">
+                @if (Model.HasPreviousPage)
+                {
+                    <li><a href="@Url.Action("index", "adcategory", new { page = (Model.PageIndex) })" title="Previous Page">
+                        &laquo; 上一页</a></li>
+                            if (Model.CurrentPage >= 8)
+                            {
+                    
+                    <li><a href="@Url.Action("index", "adcategory", new { page = (1) }) " class="number" >1</a></li>
+                    <li><a href="@Url.Action("index", "adcategory", new { page = (2) }) " class="number" >2</a></li>
+                    <li class="separator">...</li>
+                            }
+                            if (Model.CurrentPage == 6)
+                            {
+                    <li><a href="@Url.Action("index", "adcategory", new { page = (1) }) " class="number" >1</a></li>
+                            }
+                            if (Model.CurrentPage == 7)
+                            {
+                    <li><a href="@Url.Action("index", "adcategory", new { page = (1) }) " class="number" >1</a></li>
+                    <li><a href="@Url.Action("index", "adcategory", new { page = (2) }) " class="number" >2</a></li>
+                            }
+                }
+                @foreach (int i in Model.PageList)
+                {
+                    if (Model.PageIndex + 1 == i)
+                    {
+                    <li class="current"><a href="@Url.Action("index", "adcategory", new { page = (i) })" class="number current" >@i.ToString()</a></li>
+                    }
+                    else
+                    {
+                    <li><a href="@Url.Action("index", "adcategory", new { page = (i) }) " class="number" >@i.ToString()</a></li>
+                    }
+
+                }
+                @if (Model.HasNextPage)
+                {
+                    if (Model.CurrentPage <= (Model.TotalPages - 8))
+                    {
+                    <li class="separator">...</li>
+                    <li><a href="@Url.Action("index", "adcategory", new { page = (Model.TotalPages - 1) }) " class="number" >@(Model.TotalPages - 1)</a></li>
+                    <li><a href="@Url.Action("index", "adcategory", new { page = (Model.TotalPages) }) " class="number" >@Model.TotalPages</a></li>
+
+                    }
+                    if (Model.CurrentPage == (Model.TotalPages - 6))
+                    {
+                    <li><a href="@Url.Action("index", "adcategory", new { page = (Model.TotalPages - 1) }) " class="number" >@(Model.TotalPages - 1)</a></li>
+                    <li><a href="@Url.Action("index", "adcategory", new { page = (Model.TotalPages) }) " class="number" >@Model.TotalPages</a></li>
+                    }
+                    if (Model.CurrentPage == (Model.TotalPages - 5))
+                    {
+                    <li><a href="@Url.Action("index", "adcategory", new { page = (Model.TotalPages) }) " class="number" >@Model.TotalPages</a></li>
+                    }
+                    if (Model.CurrentPage == (Model.TotalPages - 7))
+                    {
+                    <li><a href="@Url.Action("index", "adcategory", new { page = (Model.TotalPages - 1) }) " class="number" >@(Model.TotalPages - 2)</a></li>
+                    <li><a href="@Url.Action("index", "adcategory", new { page = (Model.TotalPages - 2) }) " class="number" >@(Model.TotalPages - 1)</a></li>
+                    <li><a href="@Url.Action("index", "adcategory", new { page = (Model.TotalPages) }) " class="number" >@Model.TotalPages</a></li>
+
+                    }
+                    <li><a href="@Url.Action("index", "adcategory", new { page = (Model.PageIndex + 2) })" >下一页
+                        &raquo;</a></li> 
+
+                }
+            </ul>
+        </div>
+        </form>
+    </div>
+</div>
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () {
+        //A
+        $("#h-menu-ad").addClass("selected");
+        $("#menu-ad").removeClass("closed");
+        //B
+        $("#adcategoryli").removeClass("plus");
+        $("#adcategoryul").removeClass("collapsed");
+        //C
+        $("#adcategoryli").addClass("minus");
+        $("#adcategoryul").addClass("expanded");
+        //D
+        $("#adcategorylist").addClass("current");
+    });
+</script>

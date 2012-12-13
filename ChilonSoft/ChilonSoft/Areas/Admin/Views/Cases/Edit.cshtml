@@ -1,0 +1,58 @@
+﻿@model ChilonSoft.Models.Category
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+<h2>
+    修 改 项 目 分 类</h2>
+@using (Html.BeginForm("edit", "cases", FormMethod.Post, new { id = "editform" }))
+{ 
+    <div class="form">
+        <div class="fields">
+            <div class="field  field-first">
+                <div class="label">
+                    <label for="input-small">
+                        项目分类:</label>
+                </div>
+                <div class="input">
+                    @Html.TextBoxFor(d => d.CategoryName, new { @class = "small", @datatype = "s3-8", @nullmsg = "请输入项目分类！", @errormsg = "项目分类至少3个字符,最多8个字符！" })
+                </div>
+            </div>
+            <div class="field  field-first">
+                <div class="label">
+                    <label for="input-small">
+                        排序编号:</label>
+                </div>
+                <div class="input">
+                    @Html.TextBoxFor(d => d.Sort, new { @class = "small", @datatype = "n", @nullmsg = "请输入排序编号！", @errormsg = "排序编号只能是阿拉伯数字!" })
+                    <span class="error">数字大小,显示排序排前</span>
+                </div>
+            </div>
+            <div class="buttons">
+                <input type="submit" name="submit" value="修改" class="ui-button ui-widget ui-state-default ui-corner-all"
+                    role="button" aria-disabled="false" />
+                <input type="reset" name="reset" value="清空" class="ui-button ui-widget ui-state-default ui-corner-all"
+                    role="button" aria-disabled="false" />
+            </div>
+        </div>
+    </div>
+}
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () {
+        //A
+        $("#h-menu-case").addClass("selected");
+        $("#menu-case").removeClass("closed");
+        //B
+        $("#casesli").removeClass("plus");
+        $("#casesul").removeClass("collapsed");
+        //C
+        $("#casesli").addClass("minus");
+        $("#casesul").addClass("expanded");
+        //D
+        $("#addform").addClass("current");
+        //Validform
+        $("#editform").Validform();
+    });
+</script>
+<!-- scripts (Validform) -->
+<script src="@Url.Content("~/Content/admin/scripts/Validform_v5.1.js")" type="text/javascript"></script>

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChilonSoft", "ChilonSoft\ChilonSoft.csproj", "{E294F345-A9EB-4CED-85E5-024D5469228E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChilonSoft", "ChilonSoft\ChilonSoft.csproj", "{E63C5FC9-FFD7-4679-A6BD-D05C7AB1A718}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E294F345-A9EB-4CED-85E5-024D5469228E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E294F345-A9EB-4CED-85E5-024D5469228E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E294F345-A9EB-4CED-85E5-024D5469228E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E294F345-A9EB-4CED-85E5-024D5469228E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E63C5FC9-FFD7-4679-A6BD-D05C7AB1A718}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E63C5FC9-FFD7-4679-A6BD-D05C7AB1A718}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E63C5FC9-FFD7-4679-A6BD-D05C7AB1A718}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E63C5FC9-FFD7-4679-A6BD-D05C7AB1A718}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

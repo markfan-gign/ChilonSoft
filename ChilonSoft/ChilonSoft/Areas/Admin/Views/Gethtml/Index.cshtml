@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+<h2>
+    生成静态页面</h2>
+<form method="post" action="/admin/gethtml/Indexhtml">
+<div class="buttons">
+    <div class="highlight">
+        <input type="submit" name="submit.highlight" value="首页HTML生成" class="ui-button ui-widget ui-state-default ui-corner-all"
+            role="button" aria-disabled="false">
+    </div>
+</div>
+</form>
+<form method="post" action="/admin/gethtml/Articlehtml">
+<div class="buttons">
+    <div class="highlight">
+        <input type="submit" name="submit.highlight" value="文章HTML生成" class="ui-button ui-widget ui-state-default ui-corner-all"
+            role="button" aria-disabled="false">
+    </div>
+</div>
+</form>
+<form method="post" action="/admin/gethtml/Producthtml">
+<div class="buttons">
+    <div class="highlight">
+        <input type="submit" name="submit.highlight" value="产品HTML生成" class="ui-button ui-widget ui-state-default ui-corner-all"
+            role="button" aria-disabled="false">
+    </div>
+</div>
+</form>
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () {
+        //A
+        $("#h-menu-siteInfo").addClass("selected");
+        $("#menu-siteInfo").removeClass("closed");
+
+        //D
+        $("#createpage").addClass("current");
+
+    });
+</script>

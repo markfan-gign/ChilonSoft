@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 18, 26.875" name="ChilonSoft">
+  <DataContextMoniker Name="/ChilonSoftDataContext" />
+  <nestedChildShapes>
+    <classShape Id="02114e9a-8351-483c-a12a-3b2a0b39331f" absoluteBounds="6.75, 0.75, 2, 3.3970157877604166">
+      <DataClassMoniker Name="/ChilonSoftDataContext/AD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="632ec07c-04a0-4e75-8e32-b613edb8042b" absoluteBounds="6.765, 1.21, 1.9700000000000002, 2.8370157877604165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2b231ccf-d35c-43db-b6c1-e73a11b0bdd4" absoluteBounds="3.5, 8.5, 2, 1.7535424804687487">
+      <DataClassMoniker Name="/ChilonSoftDataContext/UserLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5ff39256-f8c7-452c-8e1a-3c6c7036e841" absoluteBounds="3.515, 8.96, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="aa9e5b34-aabb-4705-a115-a5ebe6f57f8c" absoluteBounds="9.75, 0.75, 2, 2.5752791341145826">
+      <DataClassMoniker Name="/ChilonSoftDataContext/AdClass" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b318bdb8-48a8-49f5-a20b-e79556418891" absoluteBounds="9.765, 1.21, 1.9700000000000002, 2.015279134114583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c49253ec-4ae2-4812-a69b-dc9a2787985e" absoluteBounds="14.5, 1.5, 2, 2.7396264648437505">
+      <DataClassMoniker Name="/ChilonSoftDataContext/Article" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b6b3ef50-16fb-41ef-b935-96c177c262ab" absoluteBounds="14.515, 1.96, 1.9700000000000002, 2.17962646484375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c9528854-58a4-4800-9c70-33696cf5ea8b" absoluteBounds="3.5, 24.25, 2, 2.4109318033854166">
+      <DataClassMoniker Name="/ChilonSoftDataContext/B_Brand" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f1f14ca9-cfb6-4de3-9483-ba726f195a95" absoluteBounds="3.515, 24.71, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f0d2351c-353f-4604-a74c-30294aab5607" absoluteBounds="3.5, 1.125, 2, 1.0961531575520835">
+      <DataClassMoniker Name="/ChilonSoftDataContext/B_Country" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a13c862e-0052-440b-9218-1eb05a7191d8" absoluteBounds="3.515, 1.585, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c32a7d72-adc0-402c-acec-16c47a38851c" absoluteBounds="3.5, 12, 2, 1.0961531575520844">
+      <DataClassMoniker Name="/ChilonSoftDataContext/B_Person" />
+      <nestedChildShapes>
+        <elementListCompartment Id="418c6a34-2824-4046-be89-9a1ea8d7d3aa" absoluteBounds="3.515, 12.46, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a3e5b6c9-2312-4ce1-bd03-2774d5b7702e" absoluteBounds="3.5, 13.875, 2, 1.0961531575520844">
+      <DataClassMoniker Name="/ChilonSoftDataContext/B_ProducingArea" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5af54ae9-268f-4dd6-94cf-d1202a7bd68f" absoluteBounds="3.515, 14.335, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="120c4347-1b84-46c9-aa0d-2643beae7c71" absoluteBounds="6.25, 6.75, 2, 5.3691837565104166">
+      <DataClassMoniker Name="/ChilonSoftDataContext/B_Product" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f40cbb0f-e1f4-464b-83dc-53fc1c8b5a10" absoluteBounds="6.265, 7.21, 1.9700000000000002, 4.8091837565104161" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eff4150c-feca-4703-8b2f-4d38d6a80bd0" absoluteBounds="3.5, 15.75, 2, 1.0961531575520827">
+      <DataClassMoniker Name="/ChilonSoftDataContext/B_Size" />
+      <nestedChildShapes>
+        <elementListCompartment Id="85740004-d8e2-4e0e-94e8-01f1e65d73c5" absoluteBounds="3.515, 16.21, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="81fd205e-a3fa-44af-8a2a-b8a9744e36b2" absoluteBounds="3.5, 17.625, 2, 1.0961531575520809">
+      <DataClassMoniker Name="/ChilonSoftDataContext/B_Type" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4eb0bfd0-f4ad-4490-b435-040a0c5b4f23" absoluteBounds="3.515, 18.085, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="de4dd53c-e971-4ca6-955d-68137de92d29" absoluteBounds="14.5, 5, 2, 2.9039737955729166">
+      <DataClassMoniker Name="/ChilonSoftDataContext/Case" />
+      <nestedChildShapes>
+        <elementListCompartment Id="615fd5b0-0053-43bb-be7b-1ffae741fe27" absoluteBounds="14.515, 5.46, 1.9700000000000002, 2.3439737955729165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3d62c166-6822-449d-b449-cddbf2c1d046" absoluteBounds="11.75, 7.125, 2, 2.4109318033854166">
+      <DataClassMoniker Name="/ChilonSoftDataContext/Category" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9c0ef77d-eefc-4cca-b227-325f240a70cb" absoluteBounds="11.765, 7.585, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2b872620-8ad4-4f8a-9f43-cfc4219769ef" absoluteBounds="14.5, 8.625, 2, 2.9039737955729166">
+      <DataClassMoniker Name="/ChilonSoftDataContext/DownLoad" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6a139267-5245-4fa2-8f0f-e7cca383b91f" absoluteBounds="14.515, 9.085, 1.9700000000000002, 2.3439737955729165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6ffc0231-a34f-4515-b619-54eb78ababbf" absoluteBounds="3.5, 4, 2, 2.9039737955729166">
+      <DataClassMoniker Name="/ChilonSoftDataContext/FeedBack" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6a07304f-5b4a-4376-ab8a-c75d0c1275b0" absoluteBounds="3.515, 4.46, 1.9700000000000002, 2.3439737955729165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="184e9eca-582d-4155-a06b-73292a5bc9f4" absoluteBounds="6.75, 13.75, 2, 2.2465844726562487">
+      <DataClassMoniker Name="/ChilonSoftDataContext/Footers" />
+      <nestedChildShapes>
+        <elementListCompartment Id="533da09e-36e3-4be3-a616-9a3469968c46" absoluteBounds="6.765, 14.21, 1.9700000000000002, 1.68658447265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eaf1c253-bbcd-4b99-95d8-c70bda23d5d8" absoluteBounds="9.75, 13.75, 2, 1.5891951497395844">
+      <DataClassMoniker Name="/ChilonSoftDataContext/FooterType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dcaf4ec0-6af6-4509-b0d8-7a439f1a67e8" absoluteBounds="9.765, 14.21, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="031980c4-40b0-437a-9100-662b48b4dd0a" absoluteBounds="6.75, 16.75, 2, 3.2326684570312523">
+      <DataClassMoniker Name="/ChilonSoftDataContext/Job" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c319be8b-0805-41a9-80bc-2fbe5984279d" absoluteBounds="6.765, 17.21, 1.9700000000000002, 2.67266845703125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="44da5127-d349-4238-a0f6-d3144d3d7864" absoluteBounds="9.75, 16.75, 2, 2.0822371419270809">
+      <DataClassMoniker Name="/ChilonSoftDataContext/Link" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3ec8a127-8fd4-405f-8b0d-cfbd4cfcbfd4" absoluteBounds="9.765, 17.21, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dac51671-5e17-412b-afac-723ab85d97a8" absoluteBounds="9.25, 6.5, 2, 5.8622257486979166">
+      <DataClassMoniker Name="/ChilonSoftDataContext/P_Project" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1ad46199-d2c3-4fa2-b88b-557a2f8282b0" absoluteBounds="9.265, 6.96, 1.9700000000000002, 5.3022257486979161" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="127a9e30-5afb-480f-9564-dd9ef5ecc7ee" absoluteBounds="14.5, 12.25, 2, 2.9039737955729166">
+      <DataClassMoniker Name="/ChilonSoftDataContext/Photo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6a55a3da-bad0-4658-aea8-e1e9eb7ca5a9" absoluteBounds="14.515, 12.71, 1.9700000000000002, 2.3439737955729165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="835e39b0-f09f-401f-b347-914927a7f992" absoluteBounds="12.75, 16.75, 2, 3.2326684570312523">
+      <DataClassMoniker Name="/ChilonSoftDataContext/Product" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ccd2eed2-e338-4302-bdbe-379b169ed3b8" absoluteBounds="12.765, 17.21, 1.9700000000000002, 2.67266845703125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="44e829e4-23a6-4088-b6e2-5d2315cfcdc8" absoluteBounds="3.5, 21.75, 2, 1.7535424804687523">
+      <DataClassMoniker Name="/ChilonSoftDataContext/S_City" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3d1fff57-1eaa-4478-a080-51487912ebfb" absoluteBounds="3.515, 22.21, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1989cd59-5463-4bb0-bab5-2d777767140b" absoluteBounds="3.5, 19.375, 2, 1.5891951497395809">
+      <DataClassMoniker Name="/ChilonSoftDataContext/S_District" />
+      <nestedChildShapes>
+        <elementListCompartment Id="80869a79-6bcb-4ff9-a9e6-b9086a18bc68" absoluteBounds="3.515, 19.835, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9c47a702-011b-40a0-8e03-37f2c57b8b38" absoluteBounds="0.75, 21.875, 2, 1.4248478190104166">
+      <DataClassMoniker Name="/ChilonSoftDataContext/S_Province" />
+      <nestedChildShapes>
+        <elementListCompartment Id="92ea84d7-49b2-43cf-bf6c-c3130d829cf4" absoluteBounds="0.765, 22.335, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8628817b-14fc-4998-9ec7-700a6110e178" absoluteBounds="15.75, 16.75, 2, 4.7117944335937523">
+      <DataClassMoniker Name="/ChilonSoftDataContext/SiteInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1f139e6f-56ed-4f71-9a46-4d195886253d" absoluteBounds="15.765, 17.21, 1.9700000000000002, 4.15179443359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f498e3d5-5c2b-400f-a2f2-6271c8dde054" absoluteBounds="0.75, 4.625, 2, 1.5891951497395827">
+      <DataClassMoniker Name="/ChilonSoftDataContext/SysUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0fdc6ea1-6f46-4bdc-abe7-197f40aecfb8" absoluteBounds="0.765, 5.085, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="19fb5d16-fb43-493a-bc83-aeb43a0906c0" absoluteBounds="0.75, 7.125, 2, 4.5474471028645835">
+      <DataClassMoniker Name="/ChilonSoftDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="39f17cfd-388b-45c6-a531-0cec8725cbeb" absoluteBounds="0.765, 7.585, 1.9700000000000002, 3.987447102864583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 25.4554659016927); (6.46875 : 25.4554659016927); (6.46875 : 12.1191837565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ChilonSoftDataContext/B_Brand/B_Brand_B_Product" />
+      <nodes>
+        <classShapeMoniker Id="c9528854-58a4-4800-9c70-33696cf5ea8b" />
+        <classShapeMoniker Id="120c4347-1b84-46c9-aa0d-2643beae7c71" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.22115315755208); (5.875 : 2.59615315755208); (5.875 : 9.43459187825521); (5.97916666666667 : 9.43459187825521 : JumpStart); (6.14583333333333 : 9.43459187825521 : JumpEnd); (6.25 : 9.43459187825521)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ChilonSoftDataContext/B_Country/B_Country_B_Product" />
+      <nodes>
+        <classShapeMoniker Id="f0d2351c-353f-4604-a74c-30294aab5607" />
+        <classShapeMoniker Id="120c4347-1b84-46c9-aa0d-2643beae7c71" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 12.6389209570313); (5.82291666666667 : 12.6389209570312 : JumpStart); (6.14583333333333 : 12.6389209570313 : JumpEnd); (6.21353666666667 : 12.6389209570312 : JumpStart); (6.77083333333333 : 12.6389209570313 : JumpEnd); (7.3906275 : 12.6389209570313); (7.3906275 : 12.1191837565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ChilonSoftDataContext/B_Person/B_Person_B_Product" />
+      <nodes>
+        <classShapeMoniker Id="c32a7d72-adc0-402c-acec-16c47a38851c" />
+        <classShapeMoniker Id="120c4347-1b84-46c9-aa0d-2643beae7c71" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 13.90704039999); (5.90625 : 13.50079039999); (5.90625 : 10.8081398173828); (5.97916666666667 : 10.8081398173828 : JumpStart); (6.14583333333333 : 10.8081398173828 : JumpEnd); (6.25 : 10.8081398173828)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ChilonSoftDataContext/B_ProducingArea/B_ProducingArea_B_Product" />
+      <nodes>
+        <classShapeMoniker Id="a3e5b6c9-2312-4ce1-bd03-2774d5b7702e" />
+        <classShapeMoniker Id="120c4347-1b84-46c9-aa0d-2643beae7c71" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 8.9047959391276); (5.79166666666667 : 8.9047959391276 : JumpStart); (5.95833333333333 : 8.9047959391276 : JumpEnd); (5.97916666666667 : 8.9047959391276 : JumpStart); (6.14583333333333 : 8.9047959391276 : JumpEnd); (6.25 : 8.9047959391276)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ChilonSoftDataContext/UserLog/UserLog_B_Product" />
+      <nodes>
+        <classShapeMoniker Id="2b231ccf-d35c-43db-b6c1-e73a11b0bdd4" />
+        <classShapeMoniker Id="120c4347-1b84-46c9-aa0d-2643beae7c71" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 16.3732922363281); (5.97916666666667 : 16.3732922363281 : JumpStart); (6.14583333333333 : 16.3732922363281 : JumpEnd); (6.3281225 : 16.3732922363281); (6.3281225 : 12.1191837565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ChilonSoftDataContext/B_Size/B_Size_B_Product" />
+      <nodes>
+        <classShapeMoniker Id="eff4150c-feca-4703-8b2f-4d38d6a80bd0" />
+        <classShapeMoniker Id="120c4347-1b84-46c9-aa0d-2643beae7c71" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 17.6798066578776); (6.0625 : 17.1173066578776); (6.0625 : 7.7961459695638); (6.25 : 7.7961459695638)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ChilonSoftDataContext/B_Type/B_Type_B_Product" />
+      <nodes>
+        <classShapeMoniker Id="81fd205e-a3fa-44af-8a2a-b8a9744e36b2" />
+        <classShapeMoniker Id="120c4347-1b84-46c9-aa0d-2643beae7c71" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.78125 : 7.125); (12.78125 : 2.86981323242188); (14.5 : 2.86981323242188)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ChilonSoftDataContext/Category/Category_Article" />
+      <nodes>
+        <classShapeMoniker Id="3d62c166-6822-449d-b449-cddbf2c1d046" />
+        <classShapeMoniker Id="c49253ec-4ae2-4812-a69b-dc9a2787985e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.75 : 7.51448689778646); (14.5 : 7.51448689778646)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ChilonSoftDataContext/Category/Category_Case" />
+      <nodes>
+        <classShapeMoniker Id="3d62c166-6822-449d-b449-cddbf2c1d046" />
+        <classShapeMoniker Id="de4dd53c-e971-4ca6-955d-68137de92d29" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.75 : 9.08046590169271); (14.5 : 9.08046590169271)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ChilonSoftDataContext/Category/Category_DownLoad" />
+      <nodes>
+        <classShapeMoniker Id="3d62c166-6822-449d-b449-cddbf2c1d046" />
+        <classShapeMoniker Id="2b872620-8ad4-4f8a-9f43-cfc4219769ef" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 10.2521926016376); (5.75 : 10.5021926016376); (5.75 : 12.4872257486979); (5.82291666666667 : 12.4872257486979 : JumpStart); (6.14583333333333 : 12.4872257486979 : JumpEnd); (6.21353666666667 : 12.4872257486979 : JumpStart); (6.77083333333333 : 12.4872257486979 : JumpEnd); (7.30729416666667 : 12.4872257486979 : JumpStart); (7.47396083333333 : 12.4872257486979 : JumpEnd); (9.125 : 12.4872257486979); (9.25 : 12.3622257486979)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ChilonSoftDataContext/UserLog/UserLog_P_Project" />
+      <nodes>
+        <classShapeMoniker Id="2b231ccf-d35c-43db-b6c1-e73a11b0bdd4" />
+        <classShapeMoniker Id="dac51671-5e17-412b-afac-723ab85d97a8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.78125 : 9.53593180338542); (12.78125 : 13.7019868977865); (14.5 : 13.7019868977865)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ChilonSoftDataContext/Category/Category_Photo" />
+      <nodes>
+        <classShapeMoniker Id="3d62c166-6822-449d-b449-cddbf2c1d046" />
+        <classShapeMoniker Id="127a9e30-5afb-480f-9564-dd9ef5ecc7ee" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 22.6267712402344); (6.38541666666667 : 22.6267712402344 : JumpStart); (6.55208333333333 : 22.6267712402344 : JumpEnd); (6.6093775 : 22.6267712402344); (6.6093775 : 12.1191837565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ChilonSoftDataContext/S_City/S_City_B_Product" />
+      <nodes>
+        <classShapeMoniker Id="44e829e4-23a6-4088-b6e2-5d2315cfcdc8" />
+        <classShapeMoniker Id="120c4347-1b84-46c9-aa0d-2643beae7c71" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 20.5046818033854); (6.29687 : 20.5046818033854); (6.29687 : 12.1191837565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ChilonSoftDataContext/S_District/S_District_B_Product" />
+      <nodes>
+        <classShapeMoniker Id="1989cd59-5463-4bb0-bab5-2d777767140b" />
+        <classShapeMoniker Id="120c4347-1b84-46c9-aa0d-2643beae7c71" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 21.75); (4.5 : 20.9641951497396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ChilonSoftDataContext/S_City/S_City_S_District" />
+      <nodes>
+        <classShapeMoniker Id="44e829e4-23a6-4088-b6e2-5d2315cfcdc8" />
+        <classShapeMoniker Id="1989cd59-5463-4bb0-bab5-2d777767140b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 22.5874239095052); (3.25 : 22.5874239095052); (3.25 : 21.5); (4.41666666666667 : 21.5 : JumpStart); (4.58333333333333 : 21.5 : JumpEnd); (6.38541666666667 : 21.5 : JumpStart); (6.55208333333333 : 21.5 : JumpEnd); (6.6875 : 21.5); (6.6875 : 12.2441837565104); (7.30729416666667 : 12.2441837565104 : JumpStart); (7.47396083333333 : 12.2441837565104 : JumpEnd); (7.85156575 : 12.2441837565104); (7.85156575 : 12.1191837565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ChilonSoftDataContext/S_Province/S_Province_B_Product" />
+      <nodes>
+        <classShapeMoniker Id="9c47a702-011b-40a0-8e03-37f2c57b8b38" />
+        <classShapeMoniker Id="120c4347-1b84-46c9-aa0d-2643beae7c71" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 22.1687119547526); (3.16666666666667 : 22.1687119547526 : JumpStart); (3.33333333333333 : 22.1687119547526 : JumpEnd); (3.5 : 22.1687119547526)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ChilonSoftDataContext/S_Province/S_Province_S_City" />
+      <nodes>
+        <classShapeMoniker Id="9c47a702-011b-40a0-8e03-37f2c57b8b38" />
+        <classShapeMoniker Id="44e829e4-23a6-4088-b6e2-5d2315cfcdc8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.41959757486979); (3.5 : 5.41959757486979)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ChilonSoftDataContext/SysUser/SysUser_FeedBack" />
+      <nodes>
+        <classShapeMoniker Id="f498e3d5-5c2b-400f-a2f2-6271c8dde054" />
+        <classShapeMoniker Id="6ffc0231-a34f-4515-b619-54eb78ababbf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 9.37677124023437); (3.5 : 9.37677124023437)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ChilonSoftDataContext/User/User_UserLog" />
+      <nodes>
+        <classShapeMoniker Id="19fb5d16-fb43-493a-bc83-aeb43a0906c0" />
+        <classShapeMoniker Id="2b231ccf-d35c-43db-b6c1-e73a11b0bdd4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 11.3027934601237); (5.66666666666667 : 11.3027934601237 : JumpStart); (6.14583333333333 : 11.3027934601237 : JumpEnd); (6.25 : 11.3027934601237)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ChilonSoftDataContext/User/User_B_Product" />
+      <nodes>
+        <classShapeMoniker Id="19fb5d16-fb43-493a-bc83-aeb43a0906c0" />
+        <classShapeMoniker Id="120c4347-1b84-46c9-aa0d-2643beae7c71" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.12653746153846); (3.125 : 6.75153746153846); (3.125 : 7.28051125711138); (3.50153746153846 : 6.90397379557292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ChilonSoftDataContext/User/User_FeedBack" />
+      <nodes>
+        <classShapeMoniker Id="19fb5d16-fb43-493a-bc83-aeb43a0906c0" />
+        <classShapeMoniker Id="6ffc0231-a34f-4515-b619-54eb78ababbf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 8.25165435088642); (3.25 : 8.25165435088642); (3.25 : 8.25); (5.75 : 8.25); (5.75 : 6.25); (5.79166666666667 : 6.25 : JumpStart); (5.95833333333333 : 6.25 : JumpEnd); (10.25 : 6.25); (10.25 : 6.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ChilonSoftDataContext/User/User_P_Project" />
+      <nodes>
+        <classShapeMoniker Id="19fb5d16-fb43-493a-bc83-aeb43a0906c0" />
+        <classShapeMoniker Id="dac51671-5e17-412b-afac-723ab85d97a8" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

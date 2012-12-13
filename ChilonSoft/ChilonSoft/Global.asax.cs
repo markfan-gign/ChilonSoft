@@ -22,19 +22,26 @@ namespace ChilonSoft
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                "Default", // Route name
-                "{controller}/{action}/{id}", // URL with parameters
-                new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+                "ActionHtml", // 路由名称
+                "{controller}/{action}", // 带有参数的 URL
+                new { controller = "Default", action = "Index" }, // 参数默认值
+                new string[] { "ChilonSoft.Controllers" }
             );
-
+            routes.MapRoute(
+                "Default", // 路由名称
+                "{controller}/{action}/{id}", // 带有参数的 URL
+                new { controller = "Default", action = "Index", id = UrlParameter.Optional }, // 参数默认值
+                new string[] { "ChilonSoft.Controllers" }
+            );
         }
 
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
 
-            RegisterGlobalFilters(GlobalFilters.Filters);
+            //RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+            //RouteDebug.RouteDebugger.RewriteRoutesForTesting(RouteTable.Routes);
         }
     }
 }

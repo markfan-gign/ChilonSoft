@@ -1,0 +1,464 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="FKDB" Class="ChilonSoftDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=NINELASTONEWIN;Initial Catalog=FKDB;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="FKDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AD" Member="AD">
+    <Type Name="AD">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClassID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AdName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="AdDescr" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TermStart" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TermEnd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AdType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AdContent" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="AdWidth" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AdHeight" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AdLink" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="OrderNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AdStatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EditTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AdScript" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserLog" Member="UserLog">
+    <Type Name="UserLog">
+      <Column Name="LogID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LogTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LogIP" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="LogState" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LogContent" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Association Name="UserLog_B_Product" Member="B_Product" ThisKey="LogID" OtherKey="LogCID" Type="B_Product" />
+      <Association Name="UserLog_P_Project" Member="P_Project" ThisKey="LogID" OtherKey="LogCID" Type="P_Project" />
+      <Association Name="User_UserLog" Member="User" ThisKey="UserID" OtherKey="UserID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AdClass" Member="AdClass">
+    <Type Name="AdClass">
+      <Column Name="ClassID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClassName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ClassDescr" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="AdLocation" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="LocationHeight" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LocationWidth" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AdNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OrderNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClassStatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AddTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EditTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Article" Member="Article">
+    <Type Name="Article">
+      <Column Name="ArticleID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="ArticleBody" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Hits" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsTop" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SEOKeyWords" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="SEODescription" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Association Name="Category_Article" Member="Category" ThisKey="CategoryID" OtherKey="CategoryID" Type="Category" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.B_Brand" Member="B_Brand">
+    <Type Name="B_Brand">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="context" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="image" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsTop" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SEOKeyWords" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="SEODescription" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Association Name="B_Brand_B_Product" Member="B_Product" ThisKey="id" OtherKey="Brand" Type="B_Product" />
+    </Type>
+  </Table>
+  <Table Name="dbo.B_Country" Member="B_Country">
+    <Type Name="B_Country">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="B_Country_B_Product" Member="B_Product" ThisKey="id" OtherKey="Country" Type="B_Product" />
+    </Type>
+  </Table>
+  <Table Name="dbo.B_Person" Member="B_Person">
+    <Type Name="B_Person">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="B_Person_B_Product" Member="B_Product" ThisKey="id" OtherKey="Person" Type="B_Product" />
+    </Type>
+  </Table>
+  <Table Name="dbo.B_ProducingArea" Member="B_ProducingArea">
+    <Type Name="B_ProducingArea">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="B_ProducingArea_B_Product" Member="B_Product" ThisKey="id" OtherKey="ProducingArea" Type="B_Product" />
+    </Type>
+  </Table>
+  <Table Name="dbo.B_Product" Member="B_Product">
+    <Type Name="B_Product">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="Size" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Person" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Brand" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Country" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProducingArea" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="VIPPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ProductImage" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ProductContext" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="SmallPic" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="BigPic" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Hits" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsTop" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Province" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="City" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="District" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ADDCID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UsersCID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LogCID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SEOKeyWords" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="SEODescription" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="SEOTitle" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Association Name="B_Brand_B_Product" Member="B_Brand" ThisKey="Brand" OtherKey="id" Type="B_Brand" IsForeignKey="true" />
+      <Association Name="B_Country_B_Product" Member="B_Country" ThisKey="Country" OtherKey="id" Type="B_Country" IsForeignKey="true" />
+      <Association Name="B_Person_B_Product" Member="B_Person" ThisKey="Person" OtherKey="id" Type="B_Person" IsForeignKey="true" />
+      <Association Name="B_ProducingArea_B_Product" Member="B_ProducingArea" ThisKey="ProducingArea" OtherKey="id" Type="B_ProducingArea" IsForeignKey="true" />
+      <Association Name="UserLog_B_Product" Member="UserLog" ThisKey="LogCID" OtherKey="LogID" Type="UserLog" IsForeignKey="true" />
+      <Association Name="B_Size_B_Product" Member="B_Size" ThisKey="Size" OtherKey="id" Type="B_Size" IsForeignKey="true" />
+      <Association Name="B_Type_B_Product" Member="B_Type" ThisKey="Type" OtherKey="id" Type="B_Type" IsForeignKey="true" />
+      <Association Name="S_City_B_Product" Member="S_City" ThisKey="City" OtherKey="CityID" Type="S_City" IsForeignKey="true" />
+      <Association Name="S_District_B_Product" Member="S_District" ThisKey="District" OtherKey="DistrictID" Type="S_District" IsForeignKey="true" />
+      <Association Name="S_Province_B_Product" Member="S_Province" ThisKey="Province" OtherKey="ProvinceID" Type="S_Province" IsForeignKey="true" />
+      <Association Name="User_B_Product" Member="User" ThisKey="UsersCID" OtherKey="UserID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.B_Size" Member="B_Size">
+    <Type Name="B_Size">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="B_Size_B_Product" Member="B_Product" ThisKey="id" OtherKey="Size" Type="B_Product" />
+    </Type>
+  </Table>
+  <Table Name="dbo.B_Type" Member="B_Type">
+    <Type Name="B_Type">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="B_Type_B_Product" Member="B_Product" ThisKey="id" OtherKey="Type" Type="B_Product" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Case]" Member="Case">
+    <Type Name="Case">
+      <Column Name="CaseID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CaseName" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="CaseContent" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SmallPic" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="BigPic" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Hits" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsTop" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SEOKeyWords" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="SEODescription" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Association Name="Category_Case" Member="Category" ThisKey="CategoryID" OtherKey="CategoryID" Type="Category" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Category" Member="Category">
+    <Type Name="Category">
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CategoryName" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CategoryCode" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SEOKeyWords" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="SEODescription" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Association Name="Category_Article" Member="Article" ThisKey="CategoryID" OtherKey="CategoryID" Type="Article" />
+      <Association Name="Category_Case" Member="Case" ThisKey="CategoryID" OtherKey="CategoryID" Type="Case" />
+      <Association Name="Category_DownLoad" Member="DownLoad" ThisKey="CategoryID" OtherKey="CategoryID" Type="DownLoad" />
+      <Association Name="Category_Photo" Member="Photo" ThisKey="CategoryID" OtherKey="CategoryID" Type="Photo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DownLoad" Member="DownLoad">
+    <Type Name="DownLoad">
+      <Column Name="DownloadID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DownloadClass" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DownloadName" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="DownloadContent" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DownloadURL" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsTop" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Hits" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SEOKeyWords" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="SEODescription" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Association Name="Category_DownLoad" Member="Category" ThisKey="CategoryID" OtherKey="CategoryID" Type="Category" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FeedBack" Member="FeedBack">
+    <Type Name="FeedBack">
+      <Column Name="FeedBackID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="BackContent" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="BackTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BackIP" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReplyContent" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="ReplyTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SysUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SEOKeyWords" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="SEODescription" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Association Name="SysUser_FeedBack" Member="SysUser" ThisKey="SysUserID" OtherKey="SysUserID" Type="SysUser" IsForeignKey="true" />
+      <Association Name="User_FeedBack" Member="User" ThisKey="UserID" OtherKey="UserID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Footers" Member="Footers">
+    <Type Name="Footers">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FTId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ContentInfo" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="APIContent" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CodeInfo" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="OrderId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FooterType" Member="FooterType">
+    <Type Name="FooterType">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="OrderId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Job" Member="Job">
+    <Type Name="Job">
+      <Column Name="JobID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="JobName" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="JobSize" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="JobDuty" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="JobRequire" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Welfare" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="JobContent" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="OverTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsTop" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Hits" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SEOKeyWords" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="SEODescription" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Link" Member="Link">
+    <Type Name="Link">
+      <Column Name="LinkID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SiteName" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="LinkType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SiteURL" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="SiteLogo" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.P_Project" Member="P_Project">
+    <Type Name="P_Project">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Project" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="EntityName" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="ContentShow" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="AdManage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PublishProduct" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="Logo" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="Map" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="Bus" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="Connection" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="URL" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="YHD" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="SmallPic" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="BigPic" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Hits" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsTop" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Province" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="City" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="District" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ADDCID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UsersCID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LogCID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SEOKeyWords" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="SEODescription" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="SEOTitle" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Association Name="UserLog_P_Project" Member="UserLog" ThisKey="LogCID" OtherKey="LogID" Type="UserLog" IsForeignKey="true" />
+      <Association Name="User_P_Project" Member="User" ThisKey="UsersCID" OtherKey="UserID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Photo" Member="Photo">
+    <Type Name="Photo">
+      <Column Name="PhotoID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PhotoTitle" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="PhotoContent" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="SmallPic" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="BigPic" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsTop" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Hits" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SEOKeyWords" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="SEODescription" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Association Name="Category_Photo" Member="Category" ThisKey="CategoryID" OtherKey="CategoryID" Type="Category" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Product" Member="Product">
+    <Type Name="Product">
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="ProductContent" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SmallPic" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="BigPic" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="VIPPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Hits" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsTop" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SEOKeyWords" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="SEODescription" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.S_City" Member="S_City">
+    <Type Name="S_City">
+      <Column Name="CityID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CityName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ZipCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ProvinceID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="S_City_B_Product" Member="B_Product" ThisKey="CityID" OtherKey="City" Type="B_Product" />
+      <Association Name="S_City_S_District" Member="S_District" ThisKey="CityID" OtherKey="CityID" Type="S_District" />
+      <Association Name="S_Province_S_City" Member="S_Province" ThisKey="ProvinceID" OtherKey="ProvinceID" Type="S_Province" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.S_District" Member="S_District">
+    <Type Name="S_District">
+      <Column Name="DistrictID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DistrictName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CityID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="S_District_B_Product" Member="B_Product" ThisKey="DistrictID" OtherKey="District" Type="B_Product" />
+      <Association Name="S_City_S_District" Member="S_City" ThisKey="CityID" OtherKey="CityID" Type="S_City" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.S_Province" Member="S_Province">
+    <Type Name="S_Province">
+      <Column Name="ProvinceID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProvinceName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateUpdated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="S_Province_B_Product" Member="B_Product" ThisKey="ProvinceID" OtherKey="Province" Type="B_Product" />
+      <Association Name="S_Province_S_City" Member="S_City" ThisKey="ProvinceID" OtherKey="ProvinceID" Type="S_City" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SiteInfo" Member="SiteInfo">
+    <Type Name="SiteInfo">
+      <Column Name="SiteID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="CompanyContent" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CompanyContact" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="XCoordinate" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="YCoordinate" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="QQ1" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="QQ2" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="QQ3" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="SiteName" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="SiteURL" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="ICP" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="ProductSmallPicStandard" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="ProductBigPicStandard" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="CaseSmallPicStandard" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="CaseBigPicStandard" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="PhotoSmallStandard" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="PhotoBigStandard" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="LinkLogoStandard" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="WaterFont" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="WaterFontSize" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="WaterText" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="WaterPicURL" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SysUser" Member="SysUser">
+    <Type Name="SysUser">
+      <Column Name="SysUserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LogName" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="PassWord" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="SysUser_FeedBack" Member="FeedBack" ThisKey="SysUserID" OtherKey="SysUserID" Type="FeedBack" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="User">
+    <Type Name="User">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LogName" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="PassWord" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="DisplayName" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="Bdata" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TrueName" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="Sex" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Province" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="City" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="District" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Company" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Job" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="QQ" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Vip" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VipCID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VipContext" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="User_UserLog" Member="UserLog" ThisKey="UserID" OtherKey="UserID" Type="UserLog" />
+      <Association Name="User_B_Product" Member="B_Product" ThisKey="UserID" OtherKey="UsersCID" Type="B_Product" />
+      <Association Name="User_FeedBack" Member="FeedBack" ThisKey="UserID" OtherKey="UserID" Type="FeedBack" />
+      <Association Name="User_P_Project" Member="P_Project" ThisKey="UserID" OtherKey="UsersCID" Type="P_Project" />
+    </Type>
+  </Table>
+</Database>

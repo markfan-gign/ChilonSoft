@@ -1,0 +1,58 @@
+﻿@model ChilonSoft.Models.Category
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+<h2>
+    修 改 图 片 分 类</h2>
+@using (Html.BeginForm("edit", "photos", FormMethod.Post, new { id = "editform" }))
+{ 
+    <div class="form">
+        <div class="fields">
+            <div class="field  field-first">
+                <div class="label">
+                    <label for="input-small">
+                        图片分类:</label>
+                </div>
+                <div class="input">
+                    @Html.TextBoxFor(d => d.CategoryName, new { @class = "small", @datatype = "s3-8", @nullmsg = "请输入产品分类！", @errormsg = "产品分类至少3个字符,最多8个字符！" })
+                </div>
+            </div>
+            <div class="field  field-first">
+                <div class="label">
+                    <label for="input-small">
+                        排序编号:</label>
+                </div>
+                <div class="input">
+                    @Html.TextBoxFor(d => d.Sort, new { @class = "small", @datatype = "n", @nullmsg = "请输入排序编号！", @errormsg = "排序编号只能是阿拉伯数字!" })
+                    <span class="error">数字大小,显示排序排前</span>
+                </div>
+            </div>
+            <div class="buttons">
+                <input type="submit" name="submit" value="修改" class="ui-button ui-widget ui-state-default ui-corner-all"
+                    role="button" aria-disabled="false" />
+                <input type="reset" name="reset" value="清空" class="ui-button ui-widget ui-state-default ui-corner-all"
+                    role="button" aria-disabled="false" />
+            </div>
+        </div>
+    </div>
+}
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () {
+        //A
+        $("#h-menu-photo").addClass("selected");
+        $("#menu-photo").removeClass("closed");
+        //B
+        $("#photosli").removeClass("plus");
+        $("#photosul").removeClass("collapsed");
+        //C
+        $("#photosli").addClass("minus");
+        $("#photosul").addClass("expanded");
+        //D
+        $("#photosadd").addClass("current");
+        //Validform
+        $("#editform").Validform();
+    });
+</script>
+<!-- scripts (Validform) -->
+<script src="@Url.Content("~/Content/admin/scripts/Validform_v5.1.js")" type="text/javascript"></script>

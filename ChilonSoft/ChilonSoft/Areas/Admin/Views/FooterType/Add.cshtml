@@ -1,0 +1,80 @@
+﻿@model ChilonSoft.Helpers.Pager<ChilonSoft.Models.FooterType>
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>
+    创 建 页 脚</h2>
+<link href="/Content/Uploadify/uploadify.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="@Url.Content("~/Content/Scripts/swfobject.js")" ></script>
+<script type="text/javascript" src="@Url.Content("~/Content/Uploadify/jquery.uploadify.v2.1.4.min.js")" ></script>
+<script type="text/javascript" src="@Url.Content("~/Content/Kindeditor/kindeditor-min.js")" ></script>
+<script type="text/javascript" src="@Url.Content("~/Content/Kindeditor/lang/zh_CN.js")" ></script>
+<script type="text/javascript" src="@Url.Content("~/Content/My97DatePicker/WdatePicker.js")" ></script>
+@using (Html.BeginForm("Add", "footertype", FormMethod.Post, new { id = "addform" }))
+{ 
+    <div class="form">
+        <div class="fields">
+            
+            <div class="field  field-first">
+                <div class="label">
+                    <label for="input-small">
+                        页脚分类名称:</label>
+                </div>
+                <div class="input">
+                    <input type="text" id="Name" name="Name" class="small" datatype="s6-18" nullmsg="请输入页脚分类名称！"
+                        errormsg="页脚分类名称至少1个字符,最多18个字符！">
+                </div>
+            </div>
+            
+            <div class="field  field-first">
+                <div class="label">
+                    <label for="input-small">
+                        链&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;接:</label>
+                </div>
+                <div class="input">
+                    <input class="large" type="text" id="Link" name="Link" datatype="url" nullmsg="请输入链接"
+                        errormsg="请输入有效链接" />
+                </div>
+            </div>
+            <div class="field  field-first">
+                <div class="label">
+                    <label for="input-small">
+                        排序编号:</label>
+                </div>
+                <div class="input">
+                    <input type="text" id="OrderId" name="OrderId" class="small" datatype="n" nullmsg="请输入排序编号！"
+                        errormsg="排序编号只能是阿拉伯数字!" />
+                    <span class="error">数字大小,显示排序排前</span>
+                </div>
+            </div>
+            <div class="buttons">
+                <input type="submit" name="submit" value="创建" class="ui-button ui-widget ui-state-default ui-corner-all"
+                    role="button" aria-disabled="false" />
+                <input type="reset" name="reset" value="清空" class="ui-button ui-widget ui-state-default ui-corner-all"
+                    role="button" aria-disabled="false" />
+            </div>
+        </div>
+    </div>
+}
+
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () {
+        //A
+        $("#h-menu-footers").addClass("selected");
+        $("#menu-footers").removeClass("closed");
+        //B
+        $("#footertypeli").removeClass("plus");
+        $("#footertypeul").removeClass("collapsed");
+        //C
+        $("#footertypeli").addClass("minus");
+        $("#footertypeul").addClass("expanded");
+        //D
+        $("#footertypeadd").addClass("current");
+        //Validform
+        $("#addform").Validform();
+    });
+</script>
+<!-- scripts (Validform) -->
+<script src="@Url.Content("~/Content/admin/scripts/Validform_v5.1.js")" type="text/javascript"></script>

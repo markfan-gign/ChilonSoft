@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>用户留言暂不可修改，如有非法信息，请删除！</h2>
+
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () {
+        //A
+        $("#h-menu-user").addClass("selected");
+        $("#menu-user").removeClass("closed");
+        //B
+        $("#feedbackli").removeClass("plus");
+        $("#feedbackul").removeClass("collapsed");
+        //C
+        $("#feedbackli").addClass("minus");
+        $("#feedbackul").addClass("expanded");
+        //D
+        $("#feedbacklist").addClass("current");
+    });
+</script>
+

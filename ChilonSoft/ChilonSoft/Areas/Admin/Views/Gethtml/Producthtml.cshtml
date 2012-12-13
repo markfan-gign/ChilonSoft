@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Producthtml";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+@model ChilonSoft.Helpers.Pager<ChilonSoft.Models.Product>
+<h2>
+    产品页面生成</h2>
+<h2>
+    全部生成成功|开始时间:@(ViewData["timeBegin"])- 结束时间:@(ViewData["timeEnd"])</h2>
+<br />
+<h2>
+    耗费时间:@(ViewData["timeBE"])</h2>
+<br />
+@for (int ix = 1; ix < int.Parse(ViewData["TotalPages"].ToString()); ix++)
+{
+    <div id="message-success" class="message message-success">
+        <div class="image">
+            <img src="../../Content/Admin/images/icons/success.png" alt="Success" height="32">
+        </div>
+        <div class="text">
+            <h6>
+                生成静态页成功 -- 第@(ix)页</h6>
+            <span><a href="../../productx_@(ix).html" target="_blank">立即预览 </a></span>
+        </div>
+    </div>
+    <br />
+}
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () {
+        //A
+        $("#h-menu-siteInfo").addClass("selected");
+        $("#menu-siteInfo").removeClass("closed");
+
+        //D
+        $("#createpage").addClass("current");
+
+    });
+</script>
