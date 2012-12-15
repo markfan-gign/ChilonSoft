@@ -95,6 +95,7 @@
     <Compile Include="Areas\Admin\Controllers\SiteController.cs" />
     <Compile Include="Areas\Admin\Controllers\SysController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -120,8 +121,6 @@
     <Compile Include="Models\Repository\ArticleRepository.cs" />
     <Compile Include="Models\Repository\CaseRepository.cs" />
     <Compile Include="Models\Repository\CategoryRepository.cs" />
-    <Compile Include="Models\Repository\CityRepository.cs" />
-    <Compile Include="Models\Repository\DistrictRepository.cs" />
     <Compile Include="Models\Repository\DownLoadRepository.cs" />
     <Compile Include="Models\Repository\FeedBackRepository.cs" />
     <Compile Include="Models\Repository\FootersRepository.cs" />
@@ -130,7 +129,6 @@
     <Compile Include="Models\Repository\LinkRepository.cs" />
     <Compile Include="Models\Repository\PhotoRepository.cs" />
     <Compile Include="Models\Repository\ProductRepository.cs" />
-    <Compile Include="Models\Repository\ProvinceRepository.cs.cs" />
     <Compile Include="Models\Repository\SiteInfoRepository.cs" />
     <Compile Include="Models\Repository\SysUserRepository.cs" />
     <Compile Include="Models\Repository\UserLogRepository.cs" />
@@ -833,7 +831,73 @@
     <Content Include="Content\Uploadify\uploadify.allglyphs.swf" />
     <Content Include="Content\Uploadify\uploadify.css" />
     <Content Include="Content\Uploadify\uploadify.swf" />
+    <Content Include="css\ie.css" />
+    <Content Include="css\ie6.css" />
+    <Content Include="css\jquery.lightbox-0.5.css" />
+    <Content Include="css\style.css" />
     <Content Include="Global.asax" />
+    <Content Include="images\about.jpg" />
+    <Content Include="images\clipboard.gif" />
+    <Content Include="images\close.png" />
+    <Content Include="images\douban.gif" />
+    <Content Include="images\down-arr.png" />
+    <Content Include="images\email.gif" />
+    <Content Include="images\favorite.gif" />
+    <Content Include="images\featured-00.jpg" />
+    <Content Include="images\featured-01.jpg" />
+    <Content Include="images\featured-02.jpg" />
+    <Content Include="images\featured-03.jpg" />
+    <Content Include="images\folio-page-bg.png" />
+    <Content Include="images\goto-arr.png" />
+    <Content Include="images\goto2-arr.png" />
+    <Content Include="images\ico-enlarge.png" />
+    <Content Include="images\ico-mail.png" />
+    <Content Include="images\lightbox-blank.gif" />
+    <Content Include="images\lightbox-btn-close.png" />
+    <Content Include="images\lightbox-btn-next.gif" />
+    <Content Include="images\lightbox-btn-prev.gif" />
+    <Content Include="images\lightbox-ico-loading.gif" />
+    <Content Include="images\loader.gif" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logox.png" />
+    <Content Include="images\more-arr-dark-ie6.png" />
+    <Content Include="images\more-arr.png" />
+    <Content Include="images\news-01.jpg" />
+    <Content Include="images\news-02.jpg" />
+    <Content Include="images\news-03.jpg" />
+    <Content Include="images\next-arr.png" />
+    <Content Include="images\photo-large.jpg" />
+    <Content Include="images\photo.jpg" />
+    <Content Include="images\portfolio01.jpg" />
+    <Content Include="images\portfolio02.jpg" />
+    <Content Include="images\portfolio03.jpg" />
+    <Content Include="images\portfolio04.jpg" />
+    <Content Include="images\portfolio05.jpg" />
+    <Content Include="images\prev-arr.png" />
+    <Content Include="images\qqmb.gif" />
+    <Content Include="images\qzone.gif" />
+    <Content Include="images\renren.gif" />
+    <Content Include="images\seethrough.png" />
+    <Content Include="images\service-01.jpg" />
+    <Content Include="images\service-02.jpg" />
+    <Content Include="images\service-03.jpg" />
+    <Content Include="images\sinaminiblog.gif" />
+    <Content Include="images\thumb01.jpg" />
+    <Content Include="images\thumb02.jpg" />
+    <Content Include="images\thumb03.jpg" />
+    <Content Include="images\thumb04.jpg" />
+    <Content Include="images\thumb05.jpg" />
+    <Content Include="images\up-arr.png" />
+    <Content Include="images\updown-arr.png" />
+    <Content Include="images\复件 logo.png" />
+    <Content Include="scripts\common.js" />
+    <Content Include="scripts\DD_belatedPNG_0.0.8a-min.js" />
+    <Content Include="scripts\fonts\cufon-yui.js" />
+    <Content Include="scripts\fonts\nevis_700.font.js" />
+    <Content Include="scripts\jquery-1.2.6.min.js" />
+    <Content Include="scripts\jquery.lightbox-0.5.min.js" />
+    <Content Include="scripts\jquery.tools.js" />
+    <Content Include="scripts\minmax.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -917,7 +981,6 @@
     <Folder Include="Content\My97DatePicker\开发包\skin\whyGreen\.svn\tmp\prop-base\" />
     <Folder Include="Content\My97DatePicker\开发包\skin\whyGreen\.svn\tmp\props\" />
     <Folder Include="Content\My97DatePicker\开发包\skin\whyGreen\.svn\tmp\text-base\" />
-    <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -926,7 +989,9 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Admin\Views\Web.config" />
+    <Content Include="Areas\Admin\Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Areas\Admin\Views\ADCategory\Add.cshtml" />
     <Content Include="Areas\Admin\Views\ADCategory\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\ADCategory\Index.cshtml" />
@@ -1004,6 +1069,8 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Views\Shared\_Admin.cshtml" />
+    <Content Include="Views\Shared\_Site.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Models\ChilonSoft.dbml.layout">

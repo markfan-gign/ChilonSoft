@@ -37,6 +37,14 @@ namespace ChilonSoft.Areas.Admin.Controllers
             model = siteinforepository.SaveOrEditModel(model);
             return RedirectToAction("Index");
         }
+        [Authorize, AcceptVerbs(HttpVerbs.Post)]
+        public ActionResult Weibo(FormCollection fc)
+        {
+            SiteInfo model = siteinforepository.GetModel();
+            UpdateModel(model);
+            model = siteinforepository.SaveOrEditModel(model);
+            return RedirectToAction("Index");
+        }
 
         [Authorize, AcceptVerbs(HttpVerbs.Post)]
         public ActionResult SiteInfo(FormCollection fc)

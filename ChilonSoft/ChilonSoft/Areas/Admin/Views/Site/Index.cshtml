@@ -17,8 +17,10 @@
             <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#box-messages">
                 公司信息</a></li>
             <li class="ui-state-default ui-corner-top"><a href="#box-other">在线客服</a></li>
+            <li class="ui-state-default ui-corner-top"><a href="#box-weibo">微博社会化</a></li>
             <li class="ui-state-default ui-corner-top"><a href="#box-dialogs">网站信息</a></li>
             <li class="ui-state-default ui-corner-top"><a href="#box-base">基本设置</a></li>
+            
         </ul>
     </div>
     <!-- box / title -->
@@ -109,6 +111,9 @@
                             })
                     </div>
                 </p>
+
+
+
                 <p>
                     <b>网站域名：</b>
                     <div class="input">
@@ -208,6 +213,73 @@
             </fieldset>
         }
     </div>
+
+     <div id="box-weibo" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+     <h3>
+            微博社会化</h3>
+        @using (Html.BeginForm("weibo", "site", FormMethod.Post, new { id = "weiboform" }))
+        {
+            <fieldset>
+                <!-- Set class to "column-left" or "column-right" on fieldsets to divide the form into columns -->
+                <p>
+                    <b>腾讯微博：</b>
+                    <div class="input">
+                        @Html.TextBoxFor(d => d.Qqmb, new { @class = "small", @datatype = "s", @nullmsg = "请输入腾讯微博！"})
+                    </div>
+                </p>
+                <p>
+                    <b>新浪微博：</b>
+                    <div class="input">
+                        @Html.TextBoxFor(d => d.Sinaminiblog, new { @class = "small", @datatype = "s", @nullmsg = "请输入新浪微博！" })
+                    </div>
+                </p>
+                <p>
+                    <b>QQ空间：</b>
+                    <div class="input">
+                        @Html.TextBoxFor(d => d.Qzone, new { @class = "small", @datatype = "s", @nullmsg = "请输入QQ空间！" })
+                    </div>
+                </p>
+                <p>
+                    <b>人人网：</b>
+                    <div class="input">
+                        @Html.TextBoxFor(d => d.Renren, new { @class = "small", @datatype = "s", @nullmsg = "请输入人人网！" })
+                    </div>
+                </p>
+                <p>
+                    <b>豆瓣：</b>
+                    <div class="input">
+                        @Html.TextBoxFor(d => d.Douban, new { @class = "small", @datatype = "s", @nullmsg = "请输入豆瓣！" })
+                    </div>
+                </p>
+                <p>
+                    <b>复制网站地址：</b>
+                    <div class="input">
+                        @Html.TextBoxFor(d => d.Clipboard, new { @class = "small", @datatype = "s", @nullmsg = "请输入复制网站地址！" })
+                    </div>
+                </p>
+                <p>
+                    <b>收藏网站地址：</b>
+                    <div class="input">
+                        @Html.TextBoxFor(d => d.Favorite, new { @class = "small", @datatype = "s", @nullmsg = "请输入收藏网站！" })
+                    </div>
+                </p>
+                <p>
+                    <b>联系我们email：</b>
+                    <div class="input">
+                        @Html.TextBoxFor(d => d.Email, new { @class = "small", @datatype = "s", @nullmsg = "请输入联系我们email！" })
+                    </div>
+                </p>
+                <p>
+                    <div class="buttons">
+                        <input type="submit" name="submit" value="保 存" class="ui-button ui-widget ui-state-default ui-corner-all"
+                            role="button" aria-disabled="false" />
+                    </div>
+                </p>
+
+            </fieldset>
+        }
+     </div>
+
 </div>
 <script language="javascript" type="text/javascript">
     $(document).ready(function () {
